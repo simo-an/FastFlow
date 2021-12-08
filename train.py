@@ -11,7 +11,8 @@ from utils import *
 
 import neptune.new as neptune
 import config as c
-import neptuneparams as nep_params
+# import neptuneparams as nep_params
+import neptune as nep_params
 
 # Neptune.ai set up, in order to keep track of your experiments
 if c.neptune_activate:
