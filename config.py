@@ -3,9 +3,13 @@ research purposes. Don't try this code if you are a software engineer.'''
 
 # device settings
 #device = 'cuda' # or 'cpu'
-device = 'cuda'
 import torch
-torch.cuda.set_device(0)
+
+device = 'cpu'
+
+if torch.cuda.is_available():
+    device = 'cuda'
+    torch.cuda.set_device(0)
 #
 # neptune
 neptune_activate = False
