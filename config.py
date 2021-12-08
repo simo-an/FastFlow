@@ -26,7 +26,7 @@ transf_saturation = 0.0
 norm_mean, norm_std = [0.485, 0.456, 0.406], [0.229, 0.224, 0.225]
 
 # feature extractor
-extractor_name = "deit"
+extractor_name = "resnet18"
 
 # network hyperparameters
 n_scales = 1 # number of scales at which features are extracted, img_size is the highest - others are //2, //4,...
