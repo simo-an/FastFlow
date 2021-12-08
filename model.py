@@ -1,6 +1,7 @@
 import os
 import torch
 from torch import nn
+from torch._C import device
 from torchsummary import summary
 
 import config as c
@@ -84,8 +85,8 @@ class FastFlow(nn.Module):
             # freeze the layers
             for param in self.feature_extractor.parameters():
                 param.requires_grad = False
-
-            print(summary(self.feature_extractor, (3,256,256)))
+            self.feature_extractor.to(c.device)
+            print(summary(self.feature_extractor, (3,256,256), device=c.device))
             #self.feature_extractor = torch.load('./pretrained/M48_448.pth') #sbagliato, carica solo i pesi, non il modello
             #self.feature_extractor.eval() # to deactivate the dropout layers
 
