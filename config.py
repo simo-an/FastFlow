@@ -11,9 +11,9 @@ import torch
 neptune_activate = False
 
 # data settings
-dataset_path = "dummy_dataset"
-class_name = "dummy_class"
-modelname = "hazelnut_test"
+dataset_path = "dataset"
+class_name = "cable"
+modelname = "cable_test"
 
 img_size = (384, 384)
 img_dims = [3] + list(img_size)
@@ -55,7 +55,7 @@ batch_size_test = batch_size * n_transforms // n_transforms_test
 # total epochs = meta_epochs * sub_epochs
 # evaluation after <sub_epochs> epochs
 meta_epochs = 24
-sub_epochs = 8
+sub_epochs = 1
 
 # output settings
 verbose = True
